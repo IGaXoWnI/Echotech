@@ -8,19 +8,26 @@
 <body>
     <header>
         <nav>
-            <ul>
-                <li> <a href="index.html">Home</a></li>
-                <li><a href="pages/about.html">About</a></li>
-                <li><a href="pages/contact.html">Contact</a></li>
-                <li><a href="pages/products.html">Our Products</a></li>
+            <ul class="nav_menu">
+                <li class="nav_item"> <a href="index.html">Home</a></li>
+                <li class="nav_item"><a href="pages/about.html">About</a></li>
+                <li class="nav_item"><a href="pages/contact.html">Contact</a></li>
+                <li class="nav_item"><a href="pages/products.html">Our Products</a></li>
+
+                
             </ul>
         </nav>
-
+    
         <div class="header_right">
             <button>
                 buy now
             </button>
-            <img src="assets/Icon/moon.png" class="moon" id="moon" alt="">
+            <img src="../assets/Icon/moon.png" class="moon" id="moon" alt="">
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
         </div>
 
     </header>
@@ -68,10 +75,10 @@
 
     </section>
     <section class="second_page white-background">
-        <div class="second_right" data-aos="fade-right">
+        <div class="second_right" >
             <img src="../assets/about1.svg" alt="">
         </div>
-        <div class="second_left" data-aos="fade-left">
+        <div class="second_left">
             <h1 class="main_title">Light, Fast & Powerful</h1>
         <p class="p_about">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus 
         mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.</p>
@@ -80,10 +87,10 @@
             
         </section>
         <section class="second_page white-background">
-            <div class="second_right"  data-aos="fade-right">
+            <div class="second_right" >
                 <img src="../assets/about3.svg" alt="">
             </div>
-            <div class="second_left"  data-aos="fade-left">
+            <div class="second_left" >
                 <h1 class="main_title">Light, Fast & Powerful</h1>
             <p class="p_about">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus 
             mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.</p>
@@ -91,7 +98,7 @@
             </div>
                 
             </section>
-            <section class="rectangle_page" data-aos="fade-up"  data-aos-duration="3000">
+            <section class="rectangle_page" >
                 <h1>A Price To Suit Everyone</h1>
                 <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula <br> eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient <br> montes, nascetur ridiculus </p>
                 <h1> $40</h1>
@@ -112,9 +119,10 @@
             <div class="footer_nav">
                 <nav>
                     <ul>
-                        <li>Home</li>
-                        <li>About</li>
-                        <li>contact</li>
+                <li> <a href="index.html">Home</a></li>
+                <li><a href="pages/about.html">About</a></li>
+                <li><a href="pages/contact.html">Contact</a></li>
+                <li><a href="pages/products.html">Our Products</a></li>
                     </ul>
                 </nav>
                 
@@ -130,43 +138,5 @@
     </footer>
     
 </body>     
-<script>
-    function loadHTML(id, file) {
-        fetch(file)
-            .then(response => response.text())
-            .then(data => document.getElementById(id).innerHTML = data)
-            .catch(error => console.error('Error loading file:', error));
-    }
-
-
-    loadHTML('about', 'pages/about.html');
-
-    
-     
-</script>
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>
-    AOS.init();
-  </script>
-
-  <script>
-   const icon = document.getElementById("moon");
-const icons = document.querySelectorAll(".icon");
-
-icon.onclick = function() {
-    document.body.classList.toggle("dark_theme");
-    
-    if (document.body.classList.contains("dark_theme")) {
-        icon.src = "assets/Icon/sun.png"; 
-        icons.forEach((icon) => {
-            icon.src = "assets/Icon_light.svg"; 
-        });
-    } else {
-        icon.src = "assets/Icon/moon.png"; 
-        icons.forEach((icon) => {
-            icon.src = "assets/Icon.svg"; 
-        });
-    }
-};
-  </script>
+<script src="../script.js"></script>
 </html>

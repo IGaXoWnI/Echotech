@@ -7,11 +7,11 @@
 <body>
     <header>
         <nav>
-            <ul>
-                <li> <a href="../index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="products.html">Our Products</a></li>
+            <ul class="nav_menu">
+                <li class="nav_item"> <a href="../index.html">Home</a></li>
+                <li class="nav_item"><a href="about.html">About</a></li>
+                <li class="nav_item"><a href="contact.html">Contact</a></li>
+                <li class="nav_item"><a href="products.html">Our Products</a></li>
 
                 
             </ul>
@@ -22,32 +22,37 @@
                 buy now
             </button>
             <img src="../assets/Icon/moon.png" class="moon" id="moon" alt="">
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
         </div>
 
     </header>
     <section class="products">
         <div class="parent">
-            <div class="grid1">
+            <div class="grid1 card">
                 <img src="../assets/products/1.png" alt="">
             </div>
-            <div class="grid2">
+            <div class="grid2 card">
                 <img src="../assets/products/2.png" alt="">
                 <h3>Un bracelet en tissus offert à l'achat</h3>
             </div>
-            <div class="grid3">
+            <div class="grid3 card">
                 <img src="../assets/products/3.png" alt="">
                 <h3>Jusqu'à 4100 DH de remise*</h3>
             </div>
-            <div class="grid4">
+            <div class="grid4 card">
                 <h3>Galaxy S24 FE</h3>
                 <p>Obtenez des cadeaux exclusifs à l'achat</p>
                 
             </div>
-            <div class="grid5">
+            <div class="grid5 card">
                 <img src="../assets/products/4.png" alt="">
                 <h3>Bespoke</h3>
             </div>
-            <div class="grid6">
+            <div class="grid6 card">
                 <img src="../assets/products/5.png" alt="">
                 <h3>Offres YouMake</h3>
             </div>
@@ -66,41 +71,23 @@
     <div class="footer_bottom">
         <div class="footer_nav">
             <nav>
-                <ul>
-                    <li>Home</li>
-                    <li>About</li>
-                    <li>contact</li>
-                </ul>
+                <ul class="footer_nav">
+                    <li> <a href="../index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="products.html">Our Products</a></li>
+               </ul>
             </nav>
             
         </div>
         <div class="social_media">
-            <img src="assets/Icon/facebook.png" alt="">
-            <img src="assets/Icon/instagram.png" alt="">
-            <img src="assets/Icon/linkedin.png" alt="">
-            <img src="assets/Icon/twitter.png" alt="">
-            <img src="assets/Icon/youtube.png" alt="">
+            <img src="../assets/Icon/facebook.png" alt="">
+            <img src="../assets/Icon/instagram.png" alt="">
+            <img src="../assets/Icon/linkedin.png" alt="">
+            <img src="../assets/Icon/twitter.png" alt="">
+            <img src="../assets/Icon/youtube.png" alt="">
         </div>
     </div>
 
-    <script>
-        const icon = document.getElementById("moon");
-     const icons = document.querySelectorAll(".icon");
-     
-     icon.onclick = function() {
-         document.body.classList.toggle("dark_theme");
-         
-         if (document.body.classList.contains("dark_theme")) {
-             icon.src = "../assets/Icon/sun.png"; 
-             icons.forEach((icon) => {
-                 icon.src = "../assets/Icon_light.svg"; 
-             });
-         } else {
-             icon.src = "../assets/Icon/moon.png"; 
-             icons.forEach((icon) => {
-                 icon.src = "../assets/Icon.svg"; 
-             });
-         }
-     };
-       </script>
+    <script src="../script.js"></script>
 </footer>
